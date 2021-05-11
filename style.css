@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Girassol&family=Nanum+Gothic&display=swap");
+
+:root {
+  --transiton: all 0.2s;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-size: 100%;
+  font-family: "Girassol", sans-serif;
+  background-color: #f2f2fa;
+}
+.card {
+  max-width: 650px;
+  margin: 3rem auto 0;
+  box-shadow: var(--light-shadow);
+  transition: var(--dark-shadow);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.person-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 30%;
+  margin-right: 3rem;
+}
+
+.main h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: hsl(209, 61%, 16%);
+  letter-spacing: 1px;
+}
+.main p {
+  font-family: "Nanum Gothic", sans-serif;
+  line-height: 1.4;
+
+  text-align: justify;
+}
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.icon {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: hsl(209, 61%, 16%);
+  transition: var(--transiton);
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: hsl(209, 28%, 39%);
+}
+button {
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 0.875rem 1.5rem;
+  color: hsl(209, 34%, 30%);
+  border: 2px solid hsl(209, 34%, 30%);
+  border-radius: 3px;
+  transition: var(--transiton);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(210, 31%, 80%);
+  color: #fff;
+  /* border: transparent; */
+}
+
+@media screen and (max-width: 700px) {
+  .person-img {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .main p {
+    text-align: center;
+  }
+  .icon {
+    padding: 0;
+  }
+  .card {
+    max-width: 400px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
