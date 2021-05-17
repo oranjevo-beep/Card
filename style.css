@@ -82,7 +82,7 @@ body {
 .icon:hover {
   color: hsl(209, 28%, 39%);
 }
-button {
+.btn {
   margin-top: 2.5rem;
   font-size: 1rem;
   background-color: transparent;
